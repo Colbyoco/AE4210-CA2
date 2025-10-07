@@ -10,3 +10,5 @@ Tt = T1*(1+(gam-1)*M1^2/2);
 P2 = Pt;
 T2 = Tt;
 end
+
+%soegbuiebi
