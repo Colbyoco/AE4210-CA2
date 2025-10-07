@@ -11,4 +11,3 @@ P2 = Pt;
 T2 = Tt;
 end
 
-%soegbuiebi
