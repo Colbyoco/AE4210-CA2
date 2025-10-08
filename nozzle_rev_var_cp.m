@@ -12,11 +12,11 @@ P9 = P0; %Given
 T9 = isen_tf_var_cp(Tt5, Pt5, P9);
 
 %To get M9, we need to find the velocity at 9
-v9 = sqrt(2*delta_h_var_cp(T9, Tt5));
+v9 = sqrt(2*delta_h_var_cp(T9, Tt5)/0.029);
 
 %also variable cp based on delta_h
 dT = 1;  % Small temperature increment [K]
-delta_h_dT = delta_h_var_cp(T9, T9 + dT);  % For Cp calculation
+delta_h_dT = delta_h_var_cp(T9, T9 + dT)/0.029;  % For Cp calculation
 Cp9 = delta_h_dT / dT;  % Cp at T9 [J/(kg·K)]
 Cv9 = Cp9 - R;  % Cv at T9
 gamma9 = Cp9 / Cv9;  % Specific heat ratio at T9

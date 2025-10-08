@@ -13,7 +13,7 @@ T2_guess = T1*(1+(gam_c-1)*M1^2/2);
 delta_h_needed = u1^2/2;
 
 %use the guess for solve T2
-T2 = fsolve(@(T) delta_h_var_cp(T1, T) - delta_h_needed, T2_guess);
+T2 = fsolve(@(T) delta_h_var_cp(T1, T)/0.029 - delta_h_needed, T2_guess);
 
 %For the P2 Guess, we want to guess P2 until the isentropic tf matches T2
 P2_guess = P1*(T2/T1)^(gam_c/(gam_c-1));
