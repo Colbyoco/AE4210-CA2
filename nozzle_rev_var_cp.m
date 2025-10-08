@@ -1,4 +1,4 @@
-function [P9, T9, M9] = nozzle_rev_var_cp(P5, T5, P0)
+function [P9, T9, M9, v9] = nozzle_rev_var_cp(P5, T5, P0)
 %Modeling Exhaust in the Nozzle from 5-9 for Variable Cp
 %Outputs of P9, T9, M9
 %Inputs of P5, T5, M5
