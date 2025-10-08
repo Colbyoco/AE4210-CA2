@@ -44,11 +44,11 @@ if t2 <= .700
     h2o = O_700(1)*t2 + O_700(2)*t2^2/2 + O_700(3)*t2^3/3 + O_700(4)*t2^4/4 - O_700(5)/t2 + O_700(6);
 elseif t2 <= 2
     h2o = O_2000(1)*t2 + O_2000(2)*t2^2/2 + O_2000(3)*t2^3/3 + O_2000(4)*t2^4/4 - O_2000(5)/t2 + O_2000(6);
-else
+elseif t2 <= 6
     h2o = O_6000(1)*t2 + O_6000(2)*t2^2/2 + O_6000(3)*t2^3/3 + O_6000(4)*t2^4/4 - O_6000(5)/t2 + O_6000(6);
 end
 
 %Next we can directly find the enthalpy change
 
-[delta_h_var_cp] = (.79*(h2n-h1n) + .21*(h2o-h1o))*1000;%joules/mol
+[delta_h_var_cp] = (.79*(h2n-h1n) + .21*(h2o-h1o))*1000/.029;%joules/kg
 
