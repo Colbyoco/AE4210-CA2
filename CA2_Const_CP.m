@@ -6,11 +6,14 @@ P1 = 100000;
 M1 = 2;
 [P2,T2] = inlet_rev_con_cp(T1,P1,M1)
 [T2_var, P2_var] = inlet_rev_var_cp(T1,P1, M1)
-% P5 = 100000;
-% T5 = 500;
-% P0 = 10000;
-% 
-% [P9, T9, M9] = nozzle_rev_con_cp(P5, T5, P0)
+
+%C2
+P5 = 100000;
+T5 = 500;
+P0 = 10000;
+
+[P9, T9, M9] = nozzle_rev_con_cp(P5, T5, P0)
+[P9_var, T9_var, M9_var] = nozzle_rev_var_cp(P5, T5, P0)
 % %C3
 % %Define known turbojet parameters
 % T4 = 1450+273; %K
