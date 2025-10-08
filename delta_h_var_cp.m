@@ -51,4 +51,4 @@ end
 %Next we can directly find the enthalpy change
 
 [delta_h_var_cp] = (.79*(h2n-h1n) + .21*(h2o-h1o))*1000/.029;%joules/kg
-
+end
