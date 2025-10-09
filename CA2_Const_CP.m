@@ -88,7 +88,7 @@ P4_var = P3_var;
 pi_t_guess = pi_c(i)^.8;
 work_balance = @(pi_t) work_error_var(pi_t, P4_var ,T4, W_rev_c_var);
 
-pi_t = fsolve(work_balance, pi_t_guess);
+pi_t = fsolve(work_balance, pi_t_guess, options);
 
 P5_var = P4_var/pi_t;
 [T5_rev_var,~] = turb_rev_low_ma_var_cp(pi_t,P4_var, T4);
@@ -167,7 +167,7 @@ P3 = pi_c_conc * P2;
 pi_t_guess = pi_c_conc;
 
 work_balance = @(pi_t) work_error(pi_t, T4, Cp_con, W_rev_c);
-pi_t = fsolve(work_balance, pi_t_guess);
+pi_t = fsolve(work_balance, pi_t_guess, options);
 
 [T5_rev, W_rev_t] = turb_rev_low_ma_con_cp(pi_t, T4, Cp_con);
 
@@ -193,7 +193,7 @@ P3_var = pi_c_conc * P2_var;
 P4_var = P3_var;
 pi_t_guess = pi_c_conc^.8;
 work_balance = @(pi_t) work_error_var(pi_t, P4_var ,T4, W_rev_c_var);
-pi_t = fsolve(work_balance, pi_t_guess);
+pi_t = fsolve(work_balance, pi_t_guess, options);
 
 
 P5_var = P4_var/pi_t;
