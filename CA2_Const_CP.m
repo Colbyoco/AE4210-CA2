@@ -57,7 +57,8 @@ P3 = pi_c(i) * P2;
 pi_t_guess = pi_c(i)^.8;
 
 work_balance = @(pi_t) work_error(pi_t, T4, Cp_con, W_rev_c);
-pi_t = fsolve(work_balance, pi_t_guess);
+options = optimset('Display', 'off', 'TolFun', 1e-8, 'TolX', 1e-8);
+pi_t = fsolve(work_balance, pi_t_guess, options);
 
 [T5_rev, ~] = turb_rev_low_ma_con_cp(pi_t, T4, Cp_con);
 
