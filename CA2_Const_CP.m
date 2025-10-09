@@ -86,6 +86,7 @@ P3_var = pi_c(i) * P2_var;
 P4_var = P3_var;
 pi_t_guess = pi_c(i)^.8;
 work_balance = @(pi_t) work_error_var(pi_t, P4_var ,T4, W_rev_c_var);
+
 pi_t = fsolve(work_balance, pi_t_guess);
 
 P5_var = P4_var/pi_t;
